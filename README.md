@@ -1,5 +1,7 @@
 # angular-url-rewrite
 
+Step by Step tutorial to remove hash tag from angular js application
+http://parmodarora.com/2016/01/03/remove-hash-from-url-in-angular-project/
 
 Remove # from Url in angular project.
 
@@ -42,26 +44,6 @@ http://localhost/#/about  --->  http://localhost/about
             break;
         }
          
-       #location /api1 {
-       #  rewrite ^/api1/(.*) /$1 break;
-       #  proxy_redirect off;
-       #  proxy_pass https://api1.example.com;
-       #  proxy_set_header X-Real-IP $remote_addr;
-       #  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-       #  proxy_set_header X-Forwarded-Proto https;
-       #  proxy_set_header Authorization $http_authorization;
-       #}
-     
-       #location /api2 {
-       #  rewrite ^/api2/(.*) /$1 break;
-       #  proxy_redirect off;
-       #  proxy_pass https://api2.example.com;
-       #  proxy_set_header X-Real-IP $remote_addr;
-       #  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-       #  proxy_set_header X-Forwarded-Proto https;
-       #  proxy_set_header Authorization $http_authorization;
-       #}
-     
        location / {
          try_files $uri /index.html;
        }
